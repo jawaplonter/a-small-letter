@@ -1,0 +1,84 @@
+
+/* PASTEL PINK THEME */
+:root {
+    --pink-light: #fff0f5;
+    --pink-soft: #ffd6e7;
+    --pink-main: #f4a7c5;
+    --pink-dark: #b84d79;
+    --text-dark: #593747;
+    --white: #ffffff;
+}
+
+/* Warna dasar halaman */
+body {
+    background-color: var(--pink-light);
+    color: var(--text-dark);
+}
+
+/* Judul */
+h1, h2, h3 {
+    color: var(--pink-dark);
+}
+
+/* Tombol */
+button,
+input[type="button"],
+input[type="submit"] {
+    background-color: var(--pink-main);
+    color: var(--white);
+    border: none;
+    border-radius: 24px;
+    padding: 12px 22px;
+    cursor: pointer;
+    transition: transform 0.25s ease,
+                background-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Efek ketika tombol disentuh mouse */
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: var(--pink-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px #b84d7933;
+}
+
+/* Foto */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* Animasi muncul perlahan */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2 {
+    animation: fadeInUp 0.8s ease both;
+}
+
+/* Tampilan di layar HP */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    img {
+        border-radius: 12px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
